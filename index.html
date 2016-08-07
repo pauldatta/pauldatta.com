@@ -15,185 +15,18 @@
   <meta name='viewport' content='width=device-width; initial-scale=1.0;' />
   <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
   <script type="text/javascript" src="instafeed.js"></script>
-
-  <style type='text/css'>
-  /*@import url(http://weloveiconfonts.com/api/?family=entypo);*/
-
-  /* entypo */
-  /*[class*="entypo-"]:before {
-    font-family: 'entypo', sans-serif;
-  }*/
-    a {
-      text-decoration: none;
-      color: #dd4830;
-    }
-    #whoami p {
-      font-family: sans-serif;
-      opacity: 0;
-      margin-top: 25px;
-      font-size: 1.5em;
-      text-align: left;
-      z-index: 9999;
-      position: absolute;
-      color: #fff;
-      top: 100px;
-      left: 100px;
-      width: 40%;
-      weight: bold;
-    }
-
-    #bg {
-      position:fixed; 
-      top:-50%; 
-      left:-50%; 
-      width:200%; 
-      height:200%;
-      background: #000;
-    }
-    #bg img {
-      position:absolute; 
-      top:0; 
-      left:0; 
-      right:0; 
-      bottom:0; 
-      margin:auto; 
-      min-width:50%;
-      min-height:50%;
-      opacity: .4;
-    }
-    #caption {
-      z-index: 99999999;
-      color: rgba(255,255,255,1);
-      font-size: 16px;
-      position: absolute;
-      bottom: 50px;
-      right: 50px;
-      text-shadow: 0 1px 1px #000;
-      line-height: .9em;
-      font-family: helvetica neue;
-      font-weight: 200;
-      width: 50%;
-      text-align: right;
-      line-height: 1.3em;
-    }
-    .next {
-      position: fixed;
-      top: 30%;
-      right: 0;
-      font-size: 150%;
-      color: #fff;
-      background: rgba(0,0,0,.5);
-      margin: 1%;
-      border-radius: 400px;
-      padding: 1em;
-      line-height: .5em;
-      cursor: pointer;
-    }
-     .prev {
-     position: fixed;
-      top: 30%;
-      left: 0;
-      font-size: 150%;
-      color: #fff;
-      background: rgba(0,0,0,.5);
-      margin: 1%;
-      border-radius: 400px;
-      padding: 1em;
-      line-height: .5em;
-      cursor: pointer;
-    }
-    /* colors  I stole from Layer Vault because they own all the color in the world */
-    .green {color:#14ad8f;}
-    .tomato {color:#dd4830;}
-    .sky {color:#00aeca;}
-    .mustard {color:#ebb831;}
-
-    ::selection {
-     background: #222; /* Safari */
-    }
-    ::-moz-selection {
-      background: #222; /* Firefox */
-    }
-
-   @media only screen and (max-device-width: 480px), only screen and (min-device-width: 560px) and (max-device-width: 1136px) and (-webkit-min-device-pixel-ratio: 2) {
-    /* iPhone only  I cant do responsive for nuts */
-      #whoami p {
-      opacity: 0;
-      margin: 2em;
-      font-size: 1.4em;
-      text-align: left;
-      z-index: 9999;
-      position: relative;
-      color: #fff;
-      top: .5em;
-      left: .2em;
-      width: 80%;
-      weight: bold;
-      display: inline-block;
-      padding: 0 0 100px 0;
-    }
-     .next {
-      position: fixed;
-      top: 2%;
-      right: 0;
-      font-size: 150%;
-      color: #fff;
-      background: rgba(0,0,0,.5);
-      margin: 1%;
-      border-radius: 400px;
-      padding: 1em;
-      line-height: .5em;
-      cursor: pointer;
-    }
-     .prev {
-      position: fixed;
-      top: 2%;
-      left: 0;
-      font-size: 150%;
-      color: #fff;
-      background: rgba(0,0,0,.5);
-      margin: 1%;
-      border-radius: 400px;
-      padding: 1em;
-      line-height: .5em;
-      cursor: pointer;
-    }
-    #caption {
-      z-index: 99999999;
-      color: rgba(255,255,255,1);
-      font-size: 16px;
-      position: relative;
-      left: 50px;
-      text-shadow: 0 1px 1px #000;
-      line-height: .9em;
-      font-family: helvetica neue;
-      font-weight: 200;
-      width: 75%;
-      text-align: left;
-      line-height: 1.3em;
-    }
-   }
-  </style>
-
-  <!-- soft load the bio -->
-  <script type='text/javascript'>//<![CDATA[
-    $(window).load(function(){
-    $("#whoami p").delay(1000).animate({"opacity": "1"}, 700);
-    });//]]>
-  </script>
-
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-  <div id="whoami">
+  <div id="whoami" class="animated fadeInUp">
     <!-- Someone make this work please  -->
     <!-- <div id="headshot" class="quickFade">
         <img src="https://assets.knome.ultimatix.net/system/users/avatars/000/120/996/large/d6a2d7a4c3c279dff0e5a643c3d9b4f4f14d9f7b.png?1346964307" alt="Paul Datta" />
     </div> -->
+    <h1>Hello, I'm Paul Datta.</h1>
     <p>
-      Hello, I'm Paul Datta.
-
-      <br><br>
       I'm a Web Application Developer with a passion for the Internet and the digital world. I have many interests.
 
       <br><br>
@@ -234,67 +67,7 @@
   <div class="prev entypo-left-open-big"><</div>
   <div class="next entypo-right-open-big">></div>
 
-  <!-- Grab My Latest Instagram Photo -->
-  <script type="text/javascript">
-
-
-feed = new Instafeed({
-   get: 'user',
-        userId: 33573265,
-        accessToken: '33573265.751a6f3.218268a956d14fbcb5a6b2ded7d60463',
-        sortby: 'random',
-        resolution: 'standard_resolution',
-        links: 'false',
-        limit: '10',
-        template: '<div id="caption">{{caption}} <br>{{likes}} likes on my <a target="_blank" href={{link}} class="sky">instagram</a></div><div id="bg"><img src="{{image}}" /></div>',
-  mock: true,
-  custom: {
-    images: [],
-    currentImage: 0,
-    showImage: function() {
-      var result, image;
-      image = this.options.custom.images[this.options.custom.currentImage];
-      result = this._makeTemplate(this.options.template, {
-        model: image,
-        id: image.id,
-        link: image.link,
-        image: image.images[this.options.resolution].url,
-        caption: this._getObjectProperty(image, 'caption.text'),
-        likes: image.likes.count,
-        comments: image.comments.count,
-        location: this._getObjectProperty(image, 'location.name')
-      });
-      $("#instafeed").html(result);
-    }
-  },
-  success: function (data) {
-    this.options.custom.images = data.data;
-    this.options.custom.showImage.call(this);
-  }
-});
-feed.run();
-
-$(".next").click(function() {
-  var length, current;
-  current = feed.options.custom.currentImage;
-  length = feed.options.custom.images.length;
-  if (current < length - 1) {
-    feed.options.custom.currentImage++;
-    feed.options.custom.showImage.call(feed);
-  }
-});
-
-$(".prev").click(function() {
-  var length, current;
-  current = feed.options.custom.currentImage;
-  length = feed.options.custom.images.length;
-  if (current > 0) {
-    feed.options.custom.currentImage--
-    feed.options.custom.showImage.call(feed);
-  }
-});
-  </script>
-
+  <script src="js/scripts.js"></script>
 
 
 <!-- GA Stuff  -->

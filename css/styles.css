@@ -1,0 +1,239 @@
+body, html {
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: #eee;
+  border-bottom: dotted 1px #555;
+}
+
+a:hover {
+  border-bottom: solid 1px #888;
+  transition: all 0.33s ease-in;
+}
+
+#whoami {
+  margin-top: 25px;
+  text-align: left;
+  z-index: 9999;
+  position: absolute;
+  color: #fff;
+  top: 100px;
+  left: 100px;
+  width: 35%;
+  // background: rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 300;
+  text-shadow: 0px 0px 2px #000;
+}
+
+h1 {
+  margin: 0;
+  font-weight: 500;
+  text-shadow: 0px 0px 2px #000;
+}
+
+#bg {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: #000;
+}
+
+#bg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
+  opacity: .4;
+}
+
+#caption {
+  z-index: 99999999;
+  color: rgba(255, 255, 255, 1);
+  font-size: 13px;
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  text-shadow: 0 1px 1px #000;
+  line-height: .9em;
+  font-weight: 200;
+  width: 40%;
+  text-align: right;
+  line-height: 1.3em;
+}
+
+.next {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  font-size: 150%;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  margin: 1%;
+  border-radius: 400px;
+  padding: 1em;
+  line-height: .5em;
+  cursor: pointer;
+  margin-top: -50px;
+}
+
+.prev {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  font-size: 150%;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  margin: 1%;
+  border-radius: 400px;
+  padding: 1em;
+  line-height: .5em;
+  cursor: pointer;
+  margin-top: -50px;
+}
+
+/* colors  I stole from Layer Vault because they own all the color in the world */
+.green:hover {
+  color: #14ad8f;
+}
+
+.tomato:hover {
+  color: #dd4830;
+}
+
+.sky:hover {
+  color: #00aeca;
+}
+
+.mustard:hover {
+  color: #ebb831;
+}
+
+::selection {
+  background: #222;
+
+  /* Safari */
+}
+
+::-moz-selection {
+  background: #222;
+
+  /* Firefox */
+}
+
+@media only screen and (max-device-width: 480px), only screen and (min-device-width: 560px) and (max-device-width: 1136px) and (-webkit-min-device-pixel-ratio: 2) {
+  /* iPhone only  I cant do responsive for nuts */
+  #whoami {
+    opacity: 0;
+    margin: 2em;
+    font-size: 1.4em;
+    text-align: left;
+    z-index: 9999;
+    position: relative;
+    color: #fff;
+    top: .5em;
+    left: .2em;
+    width: 80%;
+    weight: bold;
+    display: inline-block;
+    padding: 0 0 100px 0;
+  }
+
+  .next {
+    position: fixed;
+    top: 2%;
+    right: 0;
+    font-size: 150%;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    margin: 1%;
+    border-radius: 400px;
+    padding: 1em;
+    line-height: .5em;
+    cursor: pointer;
+  }
+
+  .prev {
+    position: fixed;
+    top: 2%;
+    left: 0;
+    font-size: 150%;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    margin: 1%;
+    border-radius: 400px;
+    padding: 1em;
+    line-height: .5em;
+    cursor: pointer;
+  }
+
+  #caption {
+    z-index: 99999999;
+    color: rgba(255, 255, 255, 1);
+    font-size: 16px;
+    position: relative;
+    left: 50px;
+    text-shadow: 0 1px 1px #000;
+    line-height: .9em;
+    font-family: helvetica neue;
+    font-weight: 200;
+    width: 75%;
+    text-align: left;
+    line-height: 1.3em;
+  }
+}
+
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
