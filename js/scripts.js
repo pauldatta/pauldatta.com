@@ -1,7 +1,8 @@
 feed = new Instafeed({
   get: 'user',
   userId: 33573265,
-  accessToken: '33573265.751a6f3.218268a956d14fbcb5a6b2ded7d60463',
+  clientId: '751a6f3f6213448c941561117cb7f356',
+  accessToken: '33573265.751a6f3.9ca45b3af55c407392ed6e8e5895f02c',
   sortby: 'random',
   resolution: 'standard_resolution',
   links: 'false',
